@@ -85,8 +85,8 @@ public class LoadDB implements Serializable {
     String fromTable = "test_videoplay_all";
     String toTable = "test_videoplay_all";
     Properties props = new Properties();
-    props.put("user", "hmdata");
-    props.put("password", "VuifWodAcBuhoa4");
+    props.put("user", "");
+    props.put("password", "");
     Dataset<Row> rows = sqlContext.read().jdbc(url, fromTable, props).where("count < 1000");
     rows.write().mode(SaveMode.Append).jdbc(url, toTable, props);
   }
