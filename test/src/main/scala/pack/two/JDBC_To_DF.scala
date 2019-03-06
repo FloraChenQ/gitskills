@@ -28,8 +28,8 @@ object JDBC_To_DF {
     val studentDF=spark.createDataFrame(ROWRDD,schema)
 
     val parameter=new Properties()
-    parameter.put("user","hmdata")
-    parameter.put("password","VuifWodAcBuhoa4")
+    parameter.put("user","")
+    parameter.put("password","")
     parameter.put("driver","com.mysql.jdbc.Driver")
     studentDF.write.mode("append").jdbc("jdbc:mysql://hm-data-innerdb.cavesgymhprc.rds.cn-north-1.amazonaws.com.cn:3306/skyfox_test","test_user",parameter) //******"是数据库名，/*/*/*/*/*表名
 //    jdbcDF.show()
