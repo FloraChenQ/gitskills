@@ -70,8 +70,8 @@ public class LoadDB implements Serializable {
     String url = "jdbc:mysql://hm-data-innerdb.cavesgymhprc.rds.cn-north-1.amazonaws.com.cn";
     String table = "test_videoplay_all";
     Properties props = new Properties();
-    props.put("user", "hmdata");
-    props.put("password", "VuifWodAcBuhoa4");
+    props.put("user", "");
+    props.put("password", "");
     String query = "select * from gulfstream_test.accounts where year=2017 and month=10 and day=23";
     Dataset<Row> rows = hiveContext.sql(query).select("id", "order_id", "status", "count");
     rows.write().mode(SaveMode.Append).jdbc(url, table, props);
